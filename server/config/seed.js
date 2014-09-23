@@ -7,6 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var List = require('../api/list/list.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -46,4 +47,13 @@ User.find({}).remove(function() {
       console.log('finished populating users');
     }
   );
+});
+
+List.find({}).remove(function() {
+  List.create({
+    name: 'Showcase',
+    active: true,
+    places: 200,
+    date: new Date() + 300000
+  });
 });

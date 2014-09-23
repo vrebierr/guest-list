@@ -9,7 +9,7 @@ angular.module('guestListApp')
 			controller: 'MainCtrl',
 			resolve: {
 				lists: function (Restangular) {
-					Restangular.all('list').getList();
+					return Restangular.all('lists').getList();
 				}
 			}
 		});
