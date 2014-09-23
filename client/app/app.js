@@ -6,7 +6,8 @@ angular.module('guestListApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
-  'restangular'
+  'restangular',
+  'ionic'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, RestangularProvider) {
     $urlRouterProvider
